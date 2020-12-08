@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% block head %}
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      {% block styles %}
+        {{ bootstrap.load_css() }}
+      {% endblock %}
+      <title>CST 205 API</title>
+    {% endblock %}
+  </head>
+<body>
+  {% block content %}
+    <div class="container">
+      <h1 class="mt-4">Bored? Let's find you something to do <small>CST 205</small></h1><br>
+      {% if data %}
+        {% for x, y in data.items() %}
+              <h5>{{x, y}}</h5>
+        <br>
+      {% endfor %}
+    {% else %}
+      no data
+    {% endif %}
+    </div>
+  {% endblock %}
+</body>
+</html>

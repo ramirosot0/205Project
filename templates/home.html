@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% block head %}
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      {% block styles %}
+        {{ bootstrap.load_css() }}
+      {% endblock %}
+      <title>CST 205 APOD</title>
+    {% endblock %}
+  </head>
+<body>
+  {% block content %}
+    <div class="container">
+      <h1 class="mt-4">Nasa's APOD <small>CST 205</small></h1>
+      {% if data %}
+        {% for i in data %}
+          <div class="card">
+            <img src="{{i['url']}}" class="card-img-top rounded">
+            <div class="card-body">
+              <h5 class="card-title">{{i['title']}}</h5>
+              <p class="card-text">
+                {{i['explanation']}}
+              </p>
+          </div>
+        </div>
+        <br>
+      {% endfor %}
+    {% else %}
+      no data
+    {% endif %}
+    </div>
+  {% endblock %}
+</body>
+</html>
