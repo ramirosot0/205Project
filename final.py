@@ -22,7 +22,7 @@ endpoint2 = 'http://www.boredapi.com/api/activity/'
 def main():
     try:
         #r = requests.get(endpoint, params=payload)
-        r = requests.get(endpoint2)
+        r = requests.get(endpoint)
         data = r.json()
         print(data)
     except:
