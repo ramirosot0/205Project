@@ -9,6 +9,7 @@ How to run program: Type in a key word, an image will appear. Options of differe
                     modifications they want to be made on the image. After thier selection, the image will apear.
                     
                     need to install extra libraries to invironment: pip install python-pixabay --  pip install requests
+                    might need to add this in the environment for windows to open in osBig Sur: export QT_MAC_WANTS_LAYER=1 
 
 Link to GitHub repository: https://github.com/thekokoloko/205Project/
 Future work:
